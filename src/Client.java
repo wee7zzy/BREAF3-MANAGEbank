@@ -173,6 +173,18 @@ public class Client {
         }
     }
 
+    public void suuprimerclient(){
+        System.out.print("entrer l'id du client a supprimer :");
+        this.setId(scanner.nextInt());
+        for(Client client: clients){
+            if(client.getId()==this.getId()){
+                clients.removeIf(a->a.getId()==this.getId());
+                System.out.println("apprenant supprimer avec succes");
+                break;
+            }else System.out.println("client introuvable ou pas de client");
+        }
+    }
+
     public void menuclient(){
         System.out.print("------MENU CLIENT-------\n"+
                 "1-ajouter\n"+
