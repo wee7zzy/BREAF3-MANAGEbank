@@ -205,6 +205,15 @@ public class Client {
             case 1:
                 ajouterclient();
                 break;
+            case 2:
+                modifierclient();
+                break;
+            case 3:
+                suuprimerclient();
+                break;
+            case 4:
+                afficherclient();
+                break;
             default:
                 System.out.println("choix invalide");
                 break;
