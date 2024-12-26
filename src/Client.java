@@ -119,7 +119,59 @@ public class Client {
         System.out.println("CLIENTS AJOUTER AVEC SUCCES");
     }
 
+    public void modifierclient(){
+        System.out.print("ENTREZ L'ID du client a modifier :");
+        this.setId(scanner.nextInt());
 
+        for(Client client : clients ){
+            if(client.getId()==this.getId()){
+                System.out.print("1-modifier id\n" +
+                        "2-modifier nom\n"+
+                        "3-modifier prenom\n"+
+                        "4-modifier email\n"+
+                        "5-modifier adresse\n"+
+                        "6-modifier telephone\n"+
+                        "----ENTRER CHOIX:");
+                int choix= scanner.nextInt();
+
+                switch(choix){
+                    case 1:
+                        System.out.print("entrer nouvelle id :");
+                        client.setId(scanner.nextInt());
+                        System.out.println("modifier avec succes ");
+                        break;
+                    case 2:
+                        System.out.print("entrer nouveau nom : ");
+                        client.setNom(scanner.next());
+                        System.out.println("modifier avec succes ");
+                        break;
+                    case 3:
+                        System.out.print("entrer nouveau prenom :");
+                        client.setPrenom(scanner.next());
+                        System.out.println("modifier avec succes");
+                        break;
+                    case 4:
+                        System.out.print("entrer nouveau email :");
+                        client.setEmail(scanner.next());
+                        System.out.println("modifier avec succes");
+                        break;
+                    case 5:
+                        System.out.print("entrer nouvelle adresse :");
+                        client.setAdresse(scanner.next());
+                        System.out.println("modifier avec succes");
+                        break;
+                    case 6:
+                        System.out.print("entrer nouveau numero telephone :");
+                        client.setTelephone(scanner.next());
+                        System.out.println("modifier avec succes");
+                        break;
+                    default:
+                        System.out.println("choix introuvable");
+                        break;
+                }
+            }else System.out.println("LISTE VIDE");
+        }
+    }
 
     public void menuclient(){
         System.out.print("------MENU CLIENT-------\n"+
