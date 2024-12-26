@@ -185,6 +185,12 @@ public class Client {
         }
     }
 
+    public void afficherclient(){
+        for(Client client:clients){
+            System.out.println(client);
+        }
+    }
+
     public void menuclient(){
         System.out.print("------MENU CLIENT-------\n"+
                 "1-ajouter\n"+
